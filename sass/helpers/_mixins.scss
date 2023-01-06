@@ -1,0 +1,13 @@
+@mixin cyan-button($padding: 12px 40px, $border-radius: 25px, $width: fit-content) {
+        background-color: $cyan;
+        color: #fff;
+        padding: $padding;
+        border-radius: $border-radius;
+        width: $width;
+        text-decoration: none;
+}
+
+@mixin desktop-paddings {
+        padding-left: 25px;
+        padding-right: 25px;
+}

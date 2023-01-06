@@ -1,0 +1,66 @@
+.shortened-link {
+    max-width: 1440px;
+    margin: {
+        left: auto;
+        right: auto;
+        top: 10px;
+    };
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    p {
+        @include poppins(500, $size: 1em);
+    }
+    .output-link {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        a {
+            @include poppins(500, $size: 1em);
+            color: $cyan;
+            text-decoration: none;
+        }
+        div {
+            &:hover {
+                background-color: $cyan-light;
+                transition-duration: 0.2s;
+            }
+            @include cyan-button(
+              $border-radius: 7px,
+              $padding: 8px 25px,
+              $width: 110px
+            );
+            @include poppins(500, 16px);
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+    }
+}
+
+.copied-background {
+    background-color: $dark-violet !important;
+}
+
+.error {
+    border: 2px solid $red !important;
+    &::placeholder {
+        color: $red;
+    }
+    
+}
+
+.error-message {
+    color: $red;
+    @include poppins(500, 0.7em);
+    font-style: italic;
+    position: absolute;
+    top: 90px;
+}
+
+.error-message-hidden {
+    visibility: hidden;
+}
